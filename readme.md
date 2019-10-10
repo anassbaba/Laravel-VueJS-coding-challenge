@@ -11,11 +11,11 @@ Please check the official laravel 6.0.3 installation guide for server requiremen
 
 Clone the repository
 
-    git clone git@github.com:gothinkster/laravel-realworld-example-app.git
+    git clone git@github.com:anassbaba/Laravel-VueJS-coding-challenge.git 
 
 Switch to the repo folder
 
-    cd laravel-realworld-example-app
+    cd Laravel-VueJS-coding-challenge
 
 Install all the dependencies using composer
 
