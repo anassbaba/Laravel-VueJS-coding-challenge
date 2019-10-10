@@ -81,5 +81,6 @@ $ php artisan fake:data
 
 If you have any questions, contact me :
 
+    Full name : Anass baba
 	Email : anasss.contact@gmail.com
 	Phone : +212 602860326
