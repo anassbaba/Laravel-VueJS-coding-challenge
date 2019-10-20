@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Session;
 
 class UsersController extends Controller
 {
@@ -33,6 +34,8 @@ class UsersController extends Controller
         $user = Auth::user();
         $user->password = bcrypt($request->get('new-password'));
         $user->save();
-        return redirect()->back()->with("success","Password changed successfully !");
+        Session::flash('message', 'Password changed successfully !');
+        Session::flash('alert-class', 'alert-success');
+        return redirect()->back();
     }
 }

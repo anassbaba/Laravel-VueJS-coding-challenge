@@ -48,16 +48,8 @@ class creatUser extends Command
      */
     public function handle()
     {
-
         $this->info('Create new user:');
         $details = $this->getDetails();
-        // if ($details) {
-        //   $user = new User($details);
-        //   $user->save();
-        //   $this->display($user);
-        // }
-        // $this->display($user);
-
     }
 
     /**
@@ -107,8 +99,7 @@ class creatUser extends Command
            'email' => $details['email'],
            'password' => Hash::make($details['password']),
        ]);
-       $this->display($user);
-       // return $details;
+       $this->display($user); 
    }
 
    /**
