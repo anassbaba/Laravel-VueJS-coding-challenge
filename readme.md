@@ -11,7 +11,7 @@ Please check the official laravel 6.0.3 installation guide for server requiremen
 
 Clone the repository
 
-    git clone git@github.com:anassbaba/Laravel-VueJS-coding-challenge.git 
+    git clone git@github.com:anassbaba/Laravel-VueJS-coding-challenge.git
 
 Switch to the repo folder
 
@@ -19,11 +19,11 @@ Switch to the repo folder
 
 Install all the dependencies using composer
 
-    composer install 
+    composer install
 
 Generate a new application key
 
-    php artisan key:generate 
+    php artisan key:generate
 
 Run the database migrations (**Set the database connection in .env before migrating**)
 
@@ -34,6 +34,20 @@ Start the local development server
     php artisan serve
 
 You can now access the server at http://localhost:8000
+
+requires at least node v.8.5.0.
+
+		npm install
+
+And run the following in your terminal/console
+
+		npm run dev
+
+Export with
+
+		npm run export
+
+
 
 
 # interactions
@@ -68,7 +82,7 @@ $ php artisan user:create
 ##### Update user password
 
 ```sh
-$ php artisan user:update-password 
+$ php artisan user:update-password
 ```
 
 ##### fake data (100000 itemes products/ 100 users)
@@ -77,7 +91,7 @@ $ php artisan user:update-password
 $ php artisan fake:data
 ```
 
-### Questions? 
+### Questions?
 
 If you have any questions, contact me :
 
