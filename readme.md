@@ -39,6 +39,14 @@ requires at least node v.8.5.0.
 
     npm install
 
+requires infinite scroll plugin for Vue.js
+
+		npm i vue-infinite-loading
+
+requires vue-resource plugin for Vue.js
+
+		npm install vue-resource
+
 And run the following in your terminal/console
 
     npm run dev
