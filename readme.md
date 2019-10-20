@@ -37,15 +37,15 @@ You can now access the server at http://localhost:8000
 
 requires at least node v.8.5.0.
 
-		npm install
+    npm install
 
 And run the following in your terminal/console
 
-		npm run dev
+    npm run dev
 
 Export with
 
-		npm run export
+    npm run export
 
 
 
