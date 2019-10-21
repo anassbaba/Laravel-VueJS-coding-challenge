@@ -48,9 +48,13 @@
                            $.each(newResponse.data, function(key,value) {
                              vm.products.push(value);
                            });
-                           $state.loaded();
+                           if (newResponse.data.length) {
+                              this.page += 1;
+                              $state.loaded();
+                            } else {
+                              $state.complete();
+                            }
                          });
-                         this.page = this.page + 1;
           }
         }
     }

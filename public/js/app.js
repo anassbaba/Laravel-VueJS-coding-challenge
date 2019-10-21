@@ -1877,6 +1877,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     infiniteHandler: function infiniteHandler($state) {
+      var _this = this;
+
       var vm = this;
       this.$http.get('/products?page=' + this.page).then(function (response) {
         return response.json();
@@ -1884,9 +1886,14 @@ __webpack_require__.r(__webpack_exports__);
         $.each(newResponse.data, function (key, value) {
           vm.products.push(value);
         });
-        $state.loaded();
+
+        if (newResponse.data.length) {
+          _this.page += 1;
+          $state.loaded();
+        } else {
+          $state.complete();
+        }
       });
-      this.page = this.page + 1;
     }
   }
 });
@@ -37233,37 +37240,7 @@ var render = function() {
                       _vm._v(_vm._s(product.description))
                     ]),
                     _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "d-flex justify-content-between align-items-center"
-                      },
-                      [
-                        _c("div", { staticClass: "btn-group" }, [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "/product" + product.id,
-                                target: "_blanc"
-                              }
-                            },
-                            [
-                              _c(
-                                "button",
-                                {
-                                  staticClass:
-                                    "btn btn-sm btn-outline-secondary",
-                                  attrs: { type: "button" }
-                                },
-                                [_vm._v("View")]
-                              )
-                            ]
-                          )
-                        ])
-                      ]
-                    )
+                    _vm._m(0, true)
                   ])
                 ])
               ])
@@ -37284,7 +37261,18 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "d-flex justify-content-between align-items-center" },
+      [_c("div", { staticClass: "btn-group" })]
+    )
+  }
+]
 render._withStripped = true
 
 
